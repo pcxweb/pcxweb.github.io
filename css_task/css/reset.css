@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, img, input, label, legend, li, mark, ol, p, section, span, strong, textarea, time, ul, var input{
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-style: normal;
+        box-sizing: border-box;
+        -moz-box-sizing:border-box; /* Firefox */
+        -webkit-box-sizing:border-box; /* Safari */
+}
+a{
+        text-decoration: none;
+}
+li{
+        list-style-type: none; 
+}
+body,html{
+	width: 100%;
+	height: 100%;
+        min-width:320px;
+}
+html{
+        font-size: 62.5%;
+        font-family: "Helvetica Neue",Helvetica,sans-serif;
+        /*谷歌浏览器字体最小12px */
+        -webkit-text-size-adjust:100%;/*关闭系统自动调整字体大小功能 */
+        -webkit-tap-hightlight-color:transparent;/*a标签及拥有：active伪类的元素都有默认的高亮框，改为透明*/
+        /*禁止文本被选中*/
+        -webkit-user-select:none;
+}
+input,button{
+        -webkit-appearance:none;/*把默认属性关掉*/
+        outline: none;
+        border:none;
+}
+.clearfix:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0;
+        clear: both;
+}
+.fr{float: right;}
+.fl{float: left;}
