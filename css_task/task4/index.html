@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<style type="text/css">
+		body{
+			background-color: #eff0f4;
+		}
+		header,mian{
+			color:#fff;
+		}
+		.header{
+			position: relative;
+			left: 0;
+			top:0;
+			background-color: #5fc0cd;
+			height: 56px;
+			line-height: 56px;
+			padding:0 10px;
+		}
+		.header a{
+			position: absolute;
+			width: 50px;
+			color: #fff;
+			font-size: 2em;
+			text-align: center;
+		}
+		.header a.zhuce{
+			left: 10px;
+		}
+		
+		.header a.close{
+			right: 10px;
+		}
+		.header a.login{
+			left:50%;
+			margin-left:-25px;
+		}
+		main form div{
+			height: 60px;
+			margin-top: 10px;
+			background-color: #fff;
+			line-height: 60px;
+		}
+		main form div input{
+			font-size: 2em;
+			padding:8px 0px;
+			vertical-align: middle;
+			padding-left: 5px;
+		}
+		form div.txt{
+			padding-left: 10px;
+		}
+		form div.txt:before{
+			content: "";
+			width: 50px;
+			height: 40px;
+			border-right:1px solid #ccc;
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		form div.txt:nth-child(1):before{
+			background: url(../images/phone.png) no-repeat;
+		}
+		form div.txt:nth-child(2):before{
+			background: url(../images/locked.png) no-repeat;
+		}
+		
+		form div.btn{
+			background-color: #5fc0cd;
+			text-align: center;
+			line-height: 60px;
+		}
+		form div.btn button{
+			width: 100%;
+			height: 60px;
+			background-color: #5fc0cd;
+			color: #fff;
+			font-size: 2em;
+			letter-spacing: 1em;
+		}
+		main p{
+			text-align: right;
+			font-size: 1.6em;
+			margin-top: 10px;
+		}
+
+		main p a{
+			color: #8bcdd7;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<a href="#" class="zhuce">注册</a>
+			<a href="#" class="login">登录</a>
+			<a href="#" class="close">关闭</a>
+		</div>
+	</header>
+	<main>
+		<form>
+			<div class="txt"><input type="text" placeholder="请输入手机号" /></div>
+			<div class="txt"><input type="password"  placeholder="请输入密码" /></div>
+			<div class="btn"><button id="btn">登录</button></div>
+		</form>
+		<p><a href="#">忘记密码？</a></p>
+	</main>
+</body>
+</html>
