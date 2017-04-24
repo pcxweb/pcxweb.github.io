@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>护工个人主页</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	
+	<style type="text/css">
+	/*字体大小是页面默认大小的100%，即16像素
+字体不要使用绝对大小"PX"，要使用相对大小“REM”*/
+		html{font-size: 62.5%;}
+		body{font:normal 100% Arial,sans-serif;font-size:14px; font-size:1.4rem}
+		nav{
+			width: 100%;
+			height: 56px;
+			background-color: #5fc0cd;
+			text-align: center;
+			color: #fff;
+			line-height: 56px;
+		}
+		nav a{
+			width: 10%;
+		}
+		nav a img{
+			vertical-align: middle;
+		}
+		nav h2{
+			width: 80%;
+			font-weight: normal;
+		}
+		div.person{
+			width: 100%;
+			height: 175px;
+			background: url("../images/5bg.png") no-repeat;
+			background-size: 100% auto;
+			position: relative;
+		}
+		div.person #ban{
+			width: 100%;
+			height: 175px;
+			position: absolute;
+			left: 0; 
+			top:0;
+			background-color:rgba(156,142,142,.58);
+		}
+		div.person div.message{
+			height: 56%;
+			position: absolute;
+			left: 0;
+			top:0;
+			right: 0;
+			bottom: 0;
+			margin:auto;
+		}
+		div.person div.message div.mess_right p{
+			color: #fff;
+			margin-top: 20px;
+			margin-left: 10px
+
+		}
+		div.person div.message div.mess_right span{
+			font-size: 18px;
+			font-size: 1.8rem;
+			margin:5px 8px;
+		}
+		div.person div.message div.mess_right p:nth-child(2){
+			margin-top: 10px;
+			margin-left:15px;
+		}
+		div.person div.message div.mess_right p:nth-child(2) img{
+			vertical-align: top;
+		}
+		/*main部分*/
+		mian{
+			width: 100%;
+		}
+		main h2{
+			height: 58px;
+			line-height: 58px;
+			border-bottom: 1px solid #e1e5e7;
+			vertical-align: middle;
+			font-weight: normal;
+		}
+		main h2:before{
+			content: "";
+			display: inline-block;
+			height: 1em;
+			width: 3px;
+			background-color: #5fc0cd;
+			margin:0 20px;
+			vertical-align: middle;
+		}
+		main table{
+			width: 95%;
+			border-collapse: collapse;
+			margin-left: 5%;
+		}
+		table  tr td{
+			height: 58px;
+			font-size: 16px;
+			font-size: 1.6rem;
+			border-bottom: 1px solid #e1e5e7;
+
+		}
+		table thead tr td img,span{
+			vertical-align: middle;
+		}
+		table thead tr td span{
+			display: inline-block;
+			margin-left: 5px;
+			padding-right: 8px;
+			padding-top: 2px;
+			border-right: 1px solid #e1e5e7;
+		}
+		
+		table tbody tr td:nth-child(1){
+			width: 6rem;
+			color: #999;
+		}
+		table tbody tr td:nth-child(3){
+			padding-left: 8px;
+		}
+		tbody td.line{
+			color: #e1e5e7;
+			/*padding:0 8px;*/
+		}
+		tbody td.redmax{
+			color: red;
+		}
+		/*底部*/
+		.footer{
+			width: 100%;
+			margin:50px auto;
+			text-align: center;
+		}
+		.footer a{
+			display: inline-block;
+			text-align: center;
+			width: 40%;
+			padding:10px 10px;
+			border:1px solid #5fc0cd;
+			border-radius: 5px;
+			color: #5fc0cd;
+			margin:0 10px;
+		}
+		.footer a.hover{
+			color: #fff;
+			background-color: #5fc0cd;
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="#" class="fl"><img src="../images/back.png" width="32"></a>
+			<h2 class="fl">个人主页</h2>
+		</nav>
+		<div class="person">
+			<div id="ban"></div>
+			<div class="message">
+				<div class="mess_left fl" style="margin-left: 20px"><img src="../images/5person.png" width="100"></div>
+				<div class="mess_right fl">
+					<p><span>高素雅</span><span>51岁</span></p>
+					<p><img src="../images/5wei.png" width="16">北京.通州.果园</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<h2>专业技能</h2>
+		<table cellpadding="0">
+			<thead>
+				<tr>	
+					<td><img src="../images/stars.png" width="20"><span>住家</span></td>
+					<td colspan="2"><img src="../images/stars.png" width="20"><span style="border: none;">不含餐</span></td>
+				</tr>				
+			</thead>
+			<tbody>
+				
+				<tr>
+					<td>从业年限</td>
+					<td class="line">|</td>
+					<td>0~3年</td>
+				</tr>
+				<tr>
+					<td>工作时间</td>
+					<td class="line">|</td>
+					<td>全天</td>
+				</tr>
+				<tr>
+					<td>服务价格</td>
+					<td class="line">|</td>
+					<td class="redmax">25元/小时</td>
+				</tr>
+				<tr>
+					<td>自我介绍</td>
+					<td class="line">|</td>
+					<td style="font-size:14px;font-size: 1.4rem">可以洗衣、做饭、照顾老人、在护工方面有5年的经验，经验丰富</td>
+				</tr>
+			</tbody>
+			
+		</table>
+	</main>
+	<footer>
+		<div class="footer">
+			<a href="#">留言</a>
+			<a class="hover" href="#">电话联系</a>
+		</div>
+	</footer>
+</body>
+
+</html>
