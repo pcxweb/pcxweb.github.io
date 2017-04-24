@@ -12,6 +12,10 @@
 		html{font-size: 62.5%;}
 		body{font:normal 100% Arial,sans-serif;font-size:14px; font-size:1.4rem}
 		nav{
+			position: fixed;
+			top:0;
+			left:0;
+			z-index: 99;
 			width: 100%;
 			height: 56px;
 			background-color: #5fc0cd;
@@ -71,9 +75,9 @@
 		div.person div.message div.mess_right p:nth-child(2) img{
 			vertical-align: top;
 		}
-		/*main部分*/
-		mian{
+		main{
 			width: 100%;
+			margin:56px 0;
 		}
 		main h2{
 			height: 58px;
@@ -131,8 +135,11 @@
 		}
 		/*底部*/
 		.footer{
+			position: fixed;
+			bottom:0;
+			left: 0;
 			width: 100%;
-			margin:50px auto;
+			margin:10px auto;
 			text-align: center;
 		}
 		.footer a{
@@ -140,7 +147,7 @@
 			text-align: center;
 			width: 40%;
 			padding:10px 10px;
-			border:1px solid #5fc0cd;
+			border:2px solid #5fc0cd;
 			border-radius: 5px;
 			color: #5fc0cd;
 			margin:0 10px;
@@ -158,6 +165,8 @@
 			<a href="#" class="fl"><img src="../images/back.png" width="32"></a>
 			<h2 class="fl">个人主页</h2>
 		</nav>
+	</header>
+	<main>
 		<div class="person">
 			<div id="ban"></div>
 			<div class="message">
@@ -168,8 +177,6 @@
 				</div>
 			</div>
 		</div>
-	</header>
-	<main>
 		<h2>专业技能</h2>
 		<table cellpadding="0">
 			<thead>
