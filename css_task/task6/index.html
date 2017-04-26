@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>护工列表页</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.6/dist/css/bootstrap.min.css">
+	<style type="text/css">
+		body{
+			margin:75px 0;
+		}
+	/*头部开始*/
+		header{
+			width: 100%;
+			position: fixed;
+			left:0;
+			top:0;
+			height: 75px;
+			background-color: #5fc0cd;
+			line-height: 75px;
+			text-align: center;
+			z-index: 99;
+		}
+		header a.btn-default{
+			color:#5fc0cd;
+		}
+		header div.icon{
+			position: absolute;
+			width: 45px;
+			height: 45px;
+			right: 6px;
+			top:15px;
+			background:url("../images/6img.png") no-repeat;
+			background-size: 110px;
+			background-position: -38px -44px;
+
+		}
+	/*头部结束*/
+
+
+	/*内容开始*/
+		main{
+			/*width: 100%;*/
+		}
+		.col-xs-4{
+			margin: 1% 0;
+   	 		padding: 2% 0;
+    		text-align: center;
+    		color: #999;
+    		border-right: 1px solid #ccc;
+    		font-size:1.5rem;
+
+		}
+		span.glyphicon-triangle-bottom{
+			padding-right: 5%;
+			padding-top: 3%;
+			float: right;
+		}
+		.form-control{
+			position: absolute;
+			left:0;
+			top:0;
+			opacity: 0;
+		}
+		.wrap .icon1,.icon2{
+			display: inline-block;
+			width: 20px;
+			height:20px;
+			vertical-align: middle;
+
+		}
+		.wrap .icon1{
+			background:url("../images/6date.png") no-repeat;
+			background-size: 16px;
+		}
+		.wrap .icon2{
+			background:url("../images/6wei.png") no-repeat;
+			background-size: 16px;
+
+		}
+		.col-xs-12{
+			padding: 2% 0 2% 2%;
+    		color: #999;
+    		border-top: 1px solid #e1e5e7;
+		}
+		span.glyphicon-chevron-right{
+			color:#5fc0cd;
+			padding:0px 5px;
+		}
+		.col-xs-12 p{
+			margin-left: 24px;
+			margin-top: 9px;
+		}
+		p.pull-right{
+			color:red;
+			vertical-align: middle;
+		}
+		p.date{
+			color:#000;
+			
+		}
+	/*内容结束*/
+
+
+	/*脚本开始*/
+		footer{
+			width: 100%;
+			position: fixed;
+			left:0;
+			bottom:0;
+			height: 75px;
+			background-color:#fff;
+			z-index: 99;
+			/*border-top:1px solid #666;*/
+		}
+		.footer{
+			width: 90%;
+			text-align: center;
+			margin:0 auto;
+
+		}
+		.footer a{
+			margin:0 auto;
+			display: inline-block;
+			width: 60px;
+			text-align: center;
+			margin:0 10px;
+		}
+		.footer a b{
+			display: inline-block;
+			background:url("../images/6img.png");
+			width: 45px;
+			height: 45px;
+			background-size: 110px;
+			/*border:1px solid red;*/
+		}
+		.footer a:nth-child(1) b{
+			background-position: 4px 2px;
+		}
+		.footer a:nth-child(2) b{
+			background:url("../images/6bi.png") no-repeat center center;
+			background-size: 28px;
+			width: 60px;
+			height: 60px;
+			background-color: #5fc0cd;
+			border-radius: 100%;
+			background-position: 18px 15px;
+		}
+		.footer a:nth-child(3){
+			color: #999;
+		}
+		.footer a:nth-child(3) b{
+			background-position: 3px -41px;
+		}
+	/*脚本结束*/
+	</style>
+</head>
+<body>
+	<header id="head">
+		<div class="btn-group">
+			<a href="#" class="btn btn-primary btn-lg">找雇主</a><a href="#" class="btn btn-default btn-lg">找护工</a>
+		</div>
+		<div class="icon"></div>
+	</header>
+	<main id="main">
+	<div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <span>所在地</span>
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                <select class="form-control">
+                    <option>所在地</option>
+                </select>
+            </div>
+            <div class="col-xs-4">
+                <span>食宿</span>
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                <select class="form-control">
+                    <option>食宿</option>
+                </select>
+            </div>
+            <div class="col-xs-4" style="border:none">
+                <span>病人情况</span>
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                <select class="form-control">
+                    <option>病人情况</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="wrap">
+                    <i class="icon1"></i>
+                    <span>服务日期</span>
+                </div>
+                <p class="pull-right">25元/小时<span class="glyphicon glyphicon-chevron-right"></span></p>
+                <p class="date">2015-7-5 至 2015-7-12</p>
+                <div class="wrap">
+                    <i class="icon2"></i>
+                    <span>北京·通州·果园</span>
+                </div>
+            </div>
+        </div>
+    </div>
+	</main>
+	<footer id="foot">
+		<div class="footer">
+			<a href="#"><b></b><br>首页</a>
+			<a class="center" href="#"><b></b></a>
+			<a href="#"><b></b><br>我的</a>
+		</div>
+	</footer>
+</body>
+</html>
