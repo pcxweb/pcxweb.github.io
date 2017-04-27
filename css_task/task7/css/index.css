@@ -1,0 +1,94 @@
+body{
+	/*max-width: 640px;*/
+	margin:52px auto;
+	background-color: #f0f0f0;
+}
+nav{
+	background-color:#5fc0cd;
+}
+nav a.navbar-brand{
+	color:#fff;
+	font-size: 2.4rem;
+
+}
+/*内容部分*/
+.history,.edition{
+	position: relative;
+	margin:15px 0px;
+	padding:20px 20px;
+	background-color: #fff;
+	font-size: 2rem;
+	color:#999;
+}
+.history p{
+	width: 100%;
+	text-align: center;
+}
+.history img{
+	position: absolute;
+	right: 15px;
+	top: 17px;
+}
+.edition {
+	padding:20px 0;
+	padding-bottom: 35px;
+}
+.edition h2{
+	color:#fbb435;
+	border-bottom: 1px solid #fde1ae;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.edition .content{
+	position: relative;
+	padding: 0 20px;
+}
+.edition .content div p{
+	text-align: center;
+	font-size: 1.4rem;
+}
+.edition .content div p.edi{
+	height: 100px;
+	line-height: 100px;
+	background-color: #5fc0cd;
+	color:#fff;
+	margin:20px 15px;
+	font-size: 1.8rem;
+}
+.edition .content div p.edi a{
+	display: inline-block;
+	color:#fff;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.edition .content .direction{
+	position: absolute;
+	right: 0;
+	top:50%;
+	margin-top: -25px;
+	width: 35px;
+	height: 50px;
+	background: url("../../images/7img.png") no-repeat;
+	background-size: 166px;
+	background-position: -98px -68px;
+}
+.edition .content .dot{
+	position: absolute;
+	bottom:-31px;
+	left:50%;
+	width: 122px;
+	margin-left: -61px;
+	height: 30px;
+}
+.edition .content .dot ul li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background-color: #ccc;
+	margin:5px 5px;
+}
+.edition .content .dot ul li.hover{
+	background-color: #5fc0cd;
+}
