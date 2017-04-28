@@ -62,19 +62,24 @@
 		text-align: center;
 	}
 	div.person{
+		width:25vw;
+		height:25vw;
 		background-color: #f5c97b;
-		border:2px solid #fff;
+		border:1vw solid #fff;
 	}
 	div.person p.role{
-		padding:20% 0;
+		height: 16.6vw;
+		line-height: 16.6vw;
+		background-color: #f5c97b;
 	}
 	div.person p.num{
+		height: 6.4vw;
+		line-height: 6.4vw;
 		color:#fff;
-		background-color: #83b09a;
-		padding:5% 0;
+		background-color: #83b09a;	
 	}
 	div.choose{
-		margin: 10px auto;
+		margin: 10px 0;
     	width: 25vw;
     	height: 4.425vw;
     	filter: Alpha(opacity=0);  /*兼容IE*/
