@@ -45,12 +45,11 @@
 	}
 	aside .mess_info span.triangle{
 		position: absolute;
-		left: 30px;
-		top:42px;
-		width: 20px;
-		height: 20px;
-		transform: rotate(45deg);
-		background-color: #b9e9f5;
+    	left: 25px;
+    	top: 41px;
+    	width: 26px;
+    	height: 26px;
+    	background: url(../../images/7sanjiao.png) no-repeat;
 	}
 	aside .mess .more{
 		margin:20px 30px;
@@ -185,8 +184,14 @@
 		.result_success .txt2 p{
 			margin-bottom: 5px;
 		}
+		.txt2 .row{
+			width: 100%;
+			margin:0;
+		}
 		.txt2 .row .col-xs-4{
-			padding:0;
+			padding: 0px;
+			text-align: left;
+			padding-right: 5px;
 		}
 		.result_history div.day{
 			width: 80%;
