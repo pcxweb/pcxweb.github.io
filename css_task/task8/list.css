@@ -1,0 +1,91 @@
+.main-nav{
+	margin:20px auto;
+	border-bottom: 1px solid #d0d6d9;
+	padding-bottom: 20px;
+}
+.main-list{
+	border-bottom: 1px solid #edf1f2;
+	padding-bottom: 20px;
+}
+.main-list span{
+	color: #999;
+}
+.main-list a{
+	display: inline-block;
+	padding:5px 5px;
+	margin-left: 15px;
+	color: #000;
+}
+.main-list a:hover,.main-list a.active{
+	background-color: #29b078;
+	color: #fff;
+}
+.container-fluid h5{
+	text-align: left;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #d0d6d9;
+	font-weight: bold;
+	margin:20px 0;
+}
+.job-mess{
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+.job-mess tr td{
+	padding:10px 8px;
+}
+.job-mess tr td{
+	font-size: 14px;
+	font-size: 1.4rem;
+	color: #999;
+
+}
+.job-mess tr td strong{
+	color: red;
+}
+.job-mess tr.img-h4 td img{
+	margin-right: 10px;
+}
+.job-mess tr.img-h4 td div{
+	color: #000;
+	margin-top: 20px;
+}
+.job-mess tr.img-h4 div h4{
+	font-weight: bold;
+}
+.job-mess{
+	position: relative;
+}
+.job-mess:hover .maskbg{
+	position: absolute;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(22,22,22,0.7);
+}
+.job-mess .mask{
+	position: absolute;
+	left:0;
+	top:0;
+	z-index: 3;
+	color:#fff;
+	margin-top: 25%;
+	display: none;
+}
+.job-mess .mask h3{
+	text-align: center;
+}
+.job-mess .mask p{
+	text-indent: 2em;
+	padding:5px 10px;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+.job-mess:hover  .mask{
+	display: block;
+}
+.row .col-sm-12 table{
+	margin:0 auto;
+}
