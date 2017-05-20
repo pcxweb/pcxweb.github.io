@@ -19,6 +19,13 @@ body,html{
 a:hover{
 	text-decoration: none;
 }
+#nav .navbar-header{
+	margin:0px 0px;
+}
+section .row{
+	margin-left:0px !important;
+	margin-right: 0px !important;
+}
 /*顶部样式*/
 	header .headtop{
 		color: #29b078;
