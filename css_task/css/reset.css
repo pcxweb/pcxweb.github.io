@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 }
-a, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, img, input, label, legend, li, mark, ol, p, section, span, strong, textarea, time, ul, var input{
+a, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, img,label, legend, li, mark, ol, p, section, span, strong, textarea, time, ul{
         margin: 0;
         border: 0;
         padding: 0;
@@ -19,11 +19,13 @@ li{
 }
 body,html{
 	width: 100%;
+	/*height: 100%;*/
         min-width:320px;
+        font-family: Arial,'Microsoft Yahei',"宋体",sans-serif,"Helvetica Neue",Helvetica;
 }
 html{
         font-size: 62.5%;
-        font-family: "Helvetica Neue",Helvetica,sans-serif;
+        
         /*谷歌浏览器字体最小12px */
         -webkit-text-size-adjust:100%;/*关闭系统自动调整字体大小功能 */
         -webkit-tap-hightlight-color:transparent;/*a标签及拥有：active伪类的元素都有默认的高亮框，改为透明*/
@@ -31,9 +33,9 @@ html{
         -webkit-user-select:none;
 }
 input,button{
-        -webkit-appearance:none;/*把默认属性关掉*/
-        outline: none;
-        border:none;
+        /*-webkit-appearance:none; 把默认属性关掉*/
+        /*outline: none;*/
+        /*border:none;*/
 }
 .clearfix:after{
         content: "";
@@ -44,3 +46,7 @@ input,button{
 }
 .fr{float: right;}
 .fl{float: left;}
+.border-box{
+        margin-left:0px;
+        margin-right: 0px; 
+}
