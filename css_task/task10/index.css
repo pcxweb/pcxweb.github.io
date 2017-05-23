@@ -1,0 +1,221 @@
+/*头部部分*/
+	header{
+		height: 42px;
+		color:#fff;
+		background-color: #1d7ad9;
+		line-height: 42px;
+	}
+	div.lgre a{
+		color:#fff;
+		margin-left: 10px;
+	}
+	div.lgre a.active{
+		display: inline-block;
+		background-color: #fff;
+		color:#000;
+		height: 42px;
+		padding:0 20px;
+	}
+/*导航部分*/
+	#headNav ul li a{
+		display: inline-block;
+		margin:29px 0 29px 59px;
+		background-color: #fff;
+		height: 49px;
+		padding-right:18px;
+		padding-left: 18px;
+		font-size: 16px;
+		font-size: 1.6rem;
+		text-align: center;
+		color:#313131;
+		text-decoration: none;
+		border-right: 1px solid #e6e6e6;
+		border-bottom: 1px solid #e6e6e6;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	#headNav ul li.active a{
+		background-color: #1d7ad9;
+		color:#fff;
+	}
+	@media only screen and (max-width: 767px){
+		#headNav ul li a{
+		    z-index: 9999;
+		    display: block;
+		    height: 50px;
+		    margin: 0 auto;
+		    padding-top: 0;
+		    padding-bottom: 0;
+		    line-height: 49px;
+		    text-align: center;
+		    background: #fff;
+		    border-radius: 0;
+		}
+	}
+/*内容部分*/
+	.main-progress{
+		padding-top: 45px;
+		background: url(../images/10order_01.png) no-repeat right top;
+	}
+	.main-progress ul{
+		width: 643px;
+		float: right;
+	}
+	@media only screen and (max-width: 680px){
+		.main-progress ul{
+		    width: 100%;
+		}
+	}
+	@media only screen and (max-width: 680px){
+		.main-progress{
+		    background-size: 100%;
+		}
+	}
+	.main-progress ul li{
+		float: left;
+		width: 25%;
+		text-align: center;
+		font-size: 18px;
+		font-size: 1.8rem;
+		color:#ccc;
+	}
+	.main-progress ul li.active{
+		color:#ff7f02;
+	}
+	p.choose-title{
+		border-left: 4px solid #1d7ad9;
+		font-size: 18px;
+		font-size: 1.8rem;
+		padding-left:6px;
+		font-weight: bold;
+		margin-top: 10px;
+	}
+	p span.p-img{
+		display: inline-block;
+		width: 22px;
+		height: 21px;
+		background:url(../images/10icon.png) no-repeat;
+		vertical-align: middle;
+		margin-right: 6px;
+	}
+	article{
+		margin-top: 20px;
+	}
+	section:nth-child(1) p span.p-img{
+		background-position: 0px 1px;
+	}
+	section:nth-child(2) p span.p-img{
+		background-position: 0px -20px;
+	}
+	section:nth-child(3) p span.p-img{
+		background-position: 4px -45px;
+	}
+	.main-choose section p{
+		background-color: #f3f3f3;
+		color:#1d7ad9;
+		padding: 10px 5px;
+		font-size: 16px;
+		font-size: 1.6rem;
+		font-weight: bold;
+		border:1px solid #ccc;
+	}
+	input[type='radio'].radio {
+		opacity:0; 
+		display:inline-block;
+		height:32px; 
+	}
+    label.radio {
+    	background:url(../images/order_hover_01.png) no-repeat;
+    	height:20px; 
+    	padding-left:25px;
+    }
+    /*+代表相邻元素*/
+    input[type='radio'].radio:checked + .radio {
+    	background:url(../images/order_hover_02.png) no-repeat;
+    }
+    .main-choose .row{
+    	border:1px solid #ccc;
+    	background-color: #fbfcff;
+    }
+    button.btn-details{
+    	height: 39px;
+	    width: 127px;
+	    font-size: 14px;
+	    color: #999;
+	    line-height: 39px;
+	    background: #FFF url(../images/10order_btn.png) no-repeat 99px center;
+	    border: none;
+    }
+    .choose-btn{
+    	margin-right: 10px;
+    }
+    .choose-btn div{
+    	display: inline-block;
+	    border: 1px solid #e8e8e8;
+	    border-radius: 1px;
+	    margin-top: 24px;
+	    margin-bottom: 20px;
+    }
+    .btn-details span{
+    	margin-right: 18px;
+    }
+
+    .btn2{
+    	margin-top: 30px;
+    }
+    input[type='text']{
+    	width: 50px;
+    	margin-top: 32px;
+    	border:1px solid #ccc;
+    }
+    #next-btn{
+    	padding-top: 142px;
+	    padding-bottom: 98px;
+	    background-color: #FFF;
+	    border-left: 1px solid #cccccc;
+	    border-right: 1px solid #cccccc;
+	    border-bottom: 1px solid #cccccc;
+	    text-align: center;
+    }
+    #next-btn a.next{
+    	background-color: #cd494c;
+    	font-size: 18px;
+    	font-size: 1.8rem;
+    	color:#fff;
+    	padding-left:25px;
+    	padding-right: 25px;
+    }
+
+/*脚本部分*/
+	.foot{
+		margin-top: 20px;
+		background-color: #f9f9f9;
+		color:#999;
+	}
+	.foot .container{
+		padding:50px 0;
+	}
+	.foot div.lowest{
+		background-color: #1d7ad9;
+		color: #fff;
+		text-align: center;
+		padding:8px 0;
+	}
+	.foot ul li{
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	.foot ul li a{
+		color:#999;
+	}
+	.foot ul li a:hover{
+		text-decoration: none;
+		cursor: pointer;
+		color:#1d7ad9;
+	}
+	.foot ul li.active a{
+		color:#1d7ad9;
+	}
+    
