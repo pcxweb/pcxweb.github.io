@@ -1,0 +1,589 @@
+<!doctype html><!--声明当前文档为html文档-->
+<html lang="en"><!--语言为英语-->
+	<head><!--头部-->
+		<meta charset="UTF-8"><!--字符编码：utf-8国际编码  gb2312中文编码-->
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>Smultron</title>
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/index.css">
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/snap.svg-min.js"></script>
+		<script src="js/canvasBg.js"></script>
+	</head>
+	<body><!--身体-->
+		<header class="pageHeader">
+			<nav class="headNav">
+				<div class="layout">
+					<div class="logo"></div>
+					<a href="javascript:;" id="navTrigger1"></a>
+					<div class="menu">
+						<ul>
+							<li>
+								<a href="#">
+									<span data-hover="WHAT WE DO">WHAT WE DO</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span data-hover="OUR PROJECTS">OUR PROJECTS</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span data-hover="TEAM">TEAM</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span data-hover="CONTACT">CONTACT</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span data-hover="PL">PL</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<section class="simple">
+				<div class="layout">
+					<article class="simple-item">
+						<div class="anim">
+							<a class="anim1" href="#">
+								<img class="img" src="images/header/anim1-bg-100.png">
+								<img class="img11" src="images/header/anim1-1.png">
+								<img class="img12" src="images/header/anim1-2.png">
+								<img class="img13" src="images/header/anim1-3.png">
+							</a>
+						</div>
+						<div class="txt"></div>
+					</article>
+					<article class="simple-item">
+						<div class="anim">
+							<a class="anim2" href="#">
+								<img class="img" src="images/header/anim2-bg-100.png">
+								<img class="img21" src="images/header/anim2-1.png">
+								<img class="img22" src="images/header/anim2-2.png">
+							</a>
+						</div>
+						<div class="txt"></div>
+					</article>
+					<article class="simple-item">
+						<div class="anim">
+							<a class="anim3" href="#">
+								<img class="img" src="images/header/anim3-bg-100.png">
+								<img class="img31" src="images/header/anim3-1.png">
+								<img class="img32" src="images/header/anim3-2.png">
+								<img class="img33" src="images/header/anim3-3.png">
+							</a>
+						</div>
+						<div class="txt"></div>
+					</article>
+				</div>
+			</section>
+			<div class="canvasBg">
+				<canvas id="canvas"></canvas>
+			</div>
+		</header>
+		<main>
+			<div class="fixedNav clearfix">
+				<a href="javascript:;" id="homePage" class="icon"></a>
+				<a href="javascript:;" id="navTrigger" class="icon"></a>
+				<div class="navContainer">
+					<div class="layout">
+						<div class="menu">
+							<ul>
+								<li>
+									<a href="#whatwedo" >
+										<span data-hover="WHAT WE DO">WHAT WE DO</span>
+									</a>
+								</li>
+								<li>
+									<a href="#projecty">
+										<span data-hover="OUR PROJECTS">OUR PROJECTS</span>
+									</a>
+								</li>
+								<li>
+									<a href="#team">
+										<span data-hover="TEAM">TEAM</span>
+									</a>
+								</li>
+								<li>
+									<a href="#contact">
+										<span data-hover="CONTACT">CONTACT</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span data-hover="PL">PL</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="svgBg">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1000 100" preserveAspectRatio="none" id="svg"></svg>
+					</div>
+					
+				</div>
+			</div>
+			<section id="whatwedo" class="whatwedo sectioner clearfix">
+				<h2 class="sectionHeader">What we do</h2>
+				<article class="whatwedo-item front-end">
+					<div class="layout">
+						<i class="icon"></i>
+						<div class="txt">
+							<h3>FRONT-END DEVELOPMENT</h3>
+							<p>In a struggle for exceptional UX we tend to win the hearts of your clients with modern weaponry: GRUNTs, PREPROS’, SASS and LESS. Our code is always on pair with project’s parameters and works perfectly fine on mobile and desktop platforms. The priority is aesthetics and full compatibility. Effective extras, like parallaxes and 3D roll-overs, are always an option. Fresh and clear front is a calling card of a modern company – it creates positive first impression and is a big leap towards winning user’s commitment.
+							</p>
+							<ul>
+								<li>HTML5</li>
+								<li>CSS3</li>
+								<li>JQUERY</li>
+								<li>RWD</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				<article class="whatwedo-item back-end">
+					<div class="layout">
+						<i class="icon"></i>
+						<div class="txt">
+							<h3>BACK-END DEVELOPMENT</h3>
+							<p>In a struggle for exceptional UX we tend to win the hearts of your clients with modern weaponry: GRUNTs, PREPROS’, SASS and LESS. Our code is always on pair with project’s parameters and works perfectly fine on mobile and desktop platforms. The priority is aesthetics and full compatibility. Effective extras, like parallaxes and 3D roll-overs, are always an option. Fresh and clear front is a calling card of a modern company – it creates positive first impression and is a big leap towards winning user’s commitment.
+							</p>
+							<ul>
+								<li>HTML5</li>
+								<li>CSS3</li>
+								<li>JQUERY</li>
+								<li>RWD</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				<article class="whatwedo-item mobileApp">
+					<div class="layout">
+						<i class="icon"></i>
+						<div class="txt">
+							<h3>MOBILE APPLICATIONS</h3>
+							<p>In a struggle for exceptional UX we tend to win the hearts of your clients with modern weaponry: GRUNTs, PREPROS’, SASS and LESS. Our code is always on pair with project’s parameters and works perfectly fine on mobile and desktop platforms. The priority is aesthetics and full compatibility. Effective extras, like parallaxes and 3D roll-overs, are always an option. Fresh and clear front is a calling card of a modern company – it creates positive first impression and is a big leap towards winning user’s commitment.
+							</p>
+							<ul>
+								<li>HTML5</li>
+								<li>CSS3</li>
+								<li>JQUERY</li>
+								<li>RWD</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+			</section>
+			<section id="projecty" class="projecty sectioner clearfix">
+				<h2 class="sectionHeader">Our projects</h2>
+				<div class="dragGallery">
+					<div class="dragGallery-grid">
+						<div class="gridItem">
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/1jadłonomia.jpg">
+								<div class="text"></div>
+							</article>
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/uwr.jpg">
+								<div class="text"></div>
+							</article>
+						</div>
+						<div class="gridItem">
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/ars-retail.jpg">
+								<div class="text"></div>
+							</article>
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/digital-heritage-center.jpg">
+								<div class="text"></div>
+							</article>
+						</div>
+						<div class="gridItem">
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/fathers.jpg">
+								<div class="text"></div>
+							</article>
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/fraemohs-homes.jpg">
+								<div class="text"></div>
+							</article>
+						</div>
+						<div class="gridItem">
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/have-a-bite-in.jpg">
+								<div class="text"></div>
+							</article>
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/jafra.jpg">
+								<div class="text"></div>
+							</article>
+						</div>
+						<div class="gridItem">
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/kino-dzieci.jpg">
+								<div class="text"></div>
+							</article>
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/krowarzywa.jpg">
+								<div class="text"></div>
+							</article>
+						</div>
+						<div class="gridItem">
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/navington.jpg">
+								<div class="text"></div>
+							</article>
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/patyna.jpg">
+								<div class="text"></div>
+							</article>
+						</div>
+						<div class="gridItem">
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/podia2.jpg">
+								<div class="text"></div>
+							</article>
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/research-online.jpg">
+								<div class="text"></div>
+							</article>
+						</div>
+						<div class="gridItem">
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/resortpro.jpg">
+								<div class="text"></div>
+							</article>
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/studio-otwarte.jpg">
+								<div class="text"></div>
+							</article>
+						</div>
+						<div class="gridItem">
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/truth-theory.jpg">
+								<div class="text"></div>
+							</article>
+							<article class="gridSubItem">
+								<img src="images/animateSomeThings/xiegarnia.jpg">
+								<div class="text"></div>
+							</article>
+						</div>
+					</div>
+					<div class="dragControls">
+						<div class="drag"></div>
+						<div class="drag-track"></div>
+						<div class="drag-prev"></div>
+						<div class="drag-next"></div>
+					</div>
+				</div>
+			</section>
+			<section id="team" class="team sectioner clearfix">
+				<h2 class="sectionHeader">Team</h2>
+				<div class="layout">
+					<p>We are fluent in machine language and we’ve successfully communicated with them for over 5 years. Our specialty is creating reliable, personalized software for web instruments (internet tools). At Smultron we undertake different projects varying in type and complexity – from designing microsites, mobile apps and e-stores to very complex online research tools and information portals. Inhuman performance and creativity have won us trust of recognizable companies in Poland and abroad. We operate mostly as subcontractors for big and middle-size advertising and interactive agencies, but we’re always interested in intriguing projects and we constantly look for new challenges.</p>
+					<a href="#" class="teamLink">
+						<i></i>Like us
+					</a>
+				</div>
+				<div class="teamGallery dragGallery">
+					<div class="dragGallery-grid">
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/1.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/2.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/3.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/4.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/5.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/6.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/7.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/8.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/9.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/10.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="gridItem person">
+							<div class="gridSubItem">
+								<figure>
+									<img src="images/animatePerson/11.jpg">
+								</figure>
+								<div>
+									<h3>MARCIN STAWOWIAK</h3>
+									<p>Executive Manager</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dragControls">
+						<div class="drag"></div>
+						<div class="drag-track"></div>
+						<div class="drag-prev"></div>
+						<div class="drag-next"></div>
+					</div>
+				</div>
+			</section>
+			<section class="testimonials clearfix">
+				<h2 class="sectionHeader">TESTIMONIALS</h2>
+				<div class="testimonialsList">
+					<div class="owl-stage-outer">
+						<div class="owl-stage">
+							<div class="owl-item">
+								<div class="layout">
+									<p>“Smultron jest firmą solidną i kompetentną, wywiązującą się z zawartych umów. Na podstawie wielu doświadczeń możemy polecić Smultron jako firmę charakteryzującą się znakomitą obsługą programistyczną.”
+									</p>
+								
+									<span>Paweł Gluza, właściciel</span>
+									<a href="#">Memolition</a>
+								</div>
+							</div>
+							<div class="owl-item">
+								<div class="layout">
+									<p>“We have been working with Smultron for over one year. We have been very pleased with the level of service we received. We would highly recommend them to provide IT services to others. We would like to recommend Smultron with the greatest enthusiasm. They respond quickly to our requests and deliver high level IT services. Weare planing on continuing our partnership with them.”
+									</p>
+								
+									<span>Paweł Gluza, właściciel</span>
+									<a href="#">Memolition</a>
+								</div>
+							</div>
+							<div class="owl-item">
+								<div class="layout">
+									<p>„(…) Prace nad projektem przebiegały sprawnie,  zadanie wykonane zostało profesjonalnie i  w przyjemnej atmosferze.  Zespół Smultron wykazał się dużą kreatywnością, zaangażowaniem i wiedzą, a jednocześnie był otwarty na nasze potrzeby i oczekiwania. (…)”
+									</p>
+								
+									<span>Paweł Gluza, właściciel</span>
+									<a href="#">Memolition</a>
+								</div>
+							</div>
+							<div class="owl-item">
+								<div class="layout">
+									<p>“We’ve worked with Smultron on a various occasions mostly on a website projects and I found them being very professional each time. Their skills are superb and client support is extraordinary. They have no problems coming with creative solutions to both design and programming challenges. Therefore if you’re looking for a hassle free, quality web services I highly recommend Smultron.”
+									</p>
+								
+									<span>Paweł Gluza, właściciel</span>
+									<a href="#">Memolition</a>
+								</div>
+							</div>
+							<div class="owl-item">
+								<div class="layout">
+									<p>“Z dużą przyjemnością i pełną odpowiedzialnością rekomenduję agencję interaktywną Smultron wszystkim, którzy cenią sobie profesjonalne podejście, terminowość realizacji zleceń i miłą współpracę. (…)“
+									</p>
+								
+									<span>Paweł Gluza, właściciel</span>
+									<a href="#">Memolition</a>
+								</div>
+							</div>
+							<div class="owl-item">
+								<div class="layout">
+									<p>“Panowie chylę czoła przed wami, jesteście profesjonalistami w każdym calu a współpraca z Wami to czysta przyjemność. Dziękuję za to, że podchodzicie do tematów z szacunkiem.”
+									</p>
+								
+									<span>Paweł Gluza, właściciel</span>
+									<a href="#">Memolition</a>
+								</div>
+							</div>
+							<div class="owl-item">
+								<div class="layout">
+									<p>The Smultron team have worked on numerous WordPress projects for us in 2015. We’ve found them to be accurate, reliable and fast with plenty of initiative. We’re very happy working with them, and highly recommend them to others looking for quality WordPress developers.
+									</p>
+								
+									<span>Paweł Gluza, właściciel</span>
+									<a href="#">Memolition</a>
+								</div>
+							</div>
+							<div class="owl-item">
+								<div class="layout">
+									<p>“ZA WO DO WO!!!”
+									</p>
+								
+									<span>Paweł Gluza, właściciel</span>
+									<a href="#">Memolition</a>
+								</div>
+							</div>
+							<div class="owl-item">
+								<div class="layout">
+									<p>“Smultron jest firmą solidną i kompetentną, wywiązującą się z zawartych umów. Na podstawie wielu doświadczeń możemy polecić Smultron jako firmę charakteryzującą się znakomitą obsługą programistyczną.”
+									</p>
+								
+									<span>Paweł Gluza, właściciel</span>
+									<a href="#">Memolition</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="owl-controls">
+						<ul>
+							<li class="active"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="contact" class="contact sectioner clearfix">
+				<h2 class="sectionHeader">CONTACT US</h2>
+				<div class="layout clearfix">
+					<div class="contactData">
+						<div class="logo1"></div>
+						<ul>
+							<li><i></i>Sławkowska 12 street</br>31-014 Krakow, Poland</li>
+							<li><i></i>tel. <span>+48 12 30 700 30</span></li>
+							<li><i></i>email: <span>hello@smultron.pl</span></li>
+							<li>VAT UE PL 676-24-82-785</li>
+						</ul>
+					</div>
+					<div class="contactForm">
+						<form>
+							<ul>
+								<li>
+									<input type="text" name="form-name" placeholder="Your Name">
+								</li>
+								<li>
+									<input type="email" name="form-email" placeholder="Email">
+								</li>
+								<li>
+									<textarea name="form-text" placeholder="Message"></textarea>
+								</li>
+								<li><button type="submit">Send</button></li>
+							</ul>
+						</form>
+					</div>
+				</div>
+				<div class="contactMap">
+					<div id="getMap"></div>
+				</div>
+			</section>			
+		</main>
+		<footer class="pageFooter">
+			<div class="layout">
+				<div class="logo3">
+					<strong></strong>
+					<span>© 2016 - All rights reserved</span>
+				</div>
+				<div class="middle-icon"></div>
+				<div class="link">
+					<div>
+					Our offer
+					<a href="#"></a>
+					</div>
+					<div>
+					pdfFind us at:
+					<a href="#"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div id="awwwards">
+			<a href="javascript:;"></a>
+		</div>
+		<script src="js/svgBg.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
