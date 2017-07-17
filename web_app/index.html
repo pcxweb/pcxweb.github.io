@@ -10,22 +10,15 @@
 	<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
 	
-	<!-- 加载H5相关资源 -->
-	<script type="text/javascript">
-		var res = [
-			'Base','Bar','Point','Polyline','Radar','Pie','Ring','Bar_v'
-		]
-		var html = [];
-		for(s in res){
-			html.push('<script type="text/javascript" src="js/H5Component'+res[s]+'.js"><\/script>');
-			html.push('<link rel="stylesheet" href="css/H5Component'+res[s]+'.css">')
-		}
-		document.write(html.join(''));
-	</script>
+	
 
 	<!-- H5对象载入 -->
 	<script type="text/javascript" src="js/H5.js"></script>
 	<link rel="stylesheet" href="css/H5.css">
+
+	<script type="text/javascript" src="js/H5_loading.js"></script>
+	<link rel="stylesheet" href="css/H5_loading.css">
+
 
 	<style type="text/css">
 		body{
@@ -60,7 +53,7 @@
 			font-size: 20px;
 			color:#fff;
 			position: absolute;
-			top:35px;
+			top:46px;
 		}
 		.h5_component_name_back{
 			top:30px;
@@ -71,6 +64,31 @@
 		}
 	</style>
 </head>
+
+<body>
+	<div class="loading">
+		<div class="double-bonce1"></div>
+		<div class="double-bonce2"></div>
+	
+		<div id="rate">0%</div>
+	</div>
+
+
+
+
+	<!-- 加载H5相关资源 -->
+	<script type="text/javascript">
+		var res = [
+			'Base','Bar','Point','Polyline','Radar','Pie','Ring','Bar_v'
+		]
+		var html = [];
+		for(s in res){
+			html.push('<script type="text/javascript" src="js/H5Component'+res[s]+'.js"><\/script>');
+			html.push('<link rel="stylesheet" href="css/H5Component'+res[s]+'.css">')
+		}
+		document.write(html.join(''));
+	</script>
+	
 <script type="text/javascript">
 	$(function(){
 		var h5 = new H5();
@@ -144,7 +162,7 @@
 						center:true,
 						text:'IT教育=只学有用的',
 						css:{opacity:0,textAlign:'center',color:'red',fontSize:'26px'},
-						animateIn:{top:110,opacity:1},
+						animateIn:{top:120,opacity:1},
 						animateOut:{top:240,opacity:0}
 					})
 					.addComponent('description',{
@@ -154,7 +172,7 @@
 						bg:'img/text-bg.png',
 						css:{opacity:0,color:'#fff',fontSize:'15px',lineHeight:'18px',padding:'15px 10px 10px 10px',textAlign:'justify',top:240},
 						text:'2013年，IT教育网诞生引领中国IT职业从教育进入新时代；高质量实战课程、全新教学模式、实时互动学习，以领先优势打造行业品牌；迄今为止，IT教育网已成为中国规模最大、互动性最高的IT技能学习平台。',
-						animateIn:{top:150,opacity:1},
+						animateIn:{top:160,opacity:1},
 						animateOut:{top:240,opacity:0},
 						delay:1000
 					})
@@ -509,11 +527,11 @@
 							$.fn.fullpage.moveTo(1)
 						}
 					})
-				.loader(1);
+				.loader(['img/logo.png','img/people.png','img/text-bg.png','img/ad-left.png','img/ad-right.png']);
 	})
 
 </script>
-<body>
+		
 	
 </body>
 </html>
