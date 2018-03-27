@@ -1,0 +1,19 @@
+.h5_component_name_baseInfo input{
+	width: 90%;
+	border:1px solid #666;
+	color: #666;
+	padding:3% 5%;
+	border-radius: 5px;
+	margin-bottom: 8px;
+}
+.h5_component_name_baseInfo ul{
+	padding-left: 0px;
+}
+.h5_component_name_baseInfo button{
+	width: 100%;
+	padding:3% 5%;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #ff9c00;
+	border:1px solid #ff9c00;
+}

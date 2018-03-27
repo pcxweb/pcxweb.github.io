@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>克拉克大学你了解多少,是大学,不是超人哦!</title>
+
+	<!--载入所有资源-->
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+
+	<!-- H5对象载入 -->
+	<script type="text/javascript" src="js/H5.js"></script>
+	<link rel="stylesheet" href="css/H5.css">
+
+	<script type="text/javascript" src="js/H5_loading.js"></script>
+	<link rel="stylesheet" href="css/H5_loading.css">
+
+	<style type="text/css">
+		body{
+			margin:0;
+			padding:0;
+			font-family: "楷体";
+		}
+		ul{
+			padding-left: 8px;
+			margin-top: 0px;
+		}
+		ul li{
+			list-style: none;
+			margin-bottom: 8px;
+		}
+		.h5_page{
+			background-image: url('img/bg2.png');
+		}
+		.h5_page_face{
+			background-image: url("img/bg2.png")
+		}
+		.h5_page_foot{
+			background-image: url("img/face_bg.png")
+		}
+		.h5_component_name_rotate{
+			-webkit-animation:rotate 2s infinite 2s;
+		}
+		@-webkit-keyframes rotate{
+			0%{transform: rotate(-15deg)}
+			5%{transform: rotate(-12deg)}
+			10%{transform: rotate(-19deg)}
+			15%{transform: rotate(-12deg)}
+			20%{transform: rotate(-17deg)}
+			25%{transform: rotate(-14deg)}
+			30%{transform: rotate(-16deg)}
+			70%{transform: rotate(-15deg)}
+		}
+		.h5_component_name_caption{
+			background-image: url('img/title-bg.png');
+			width: 283px;
+			height: 160px;
+			text-align: center;
+			line-height: 50px;
+			font-size: 20px;
+			color:#fff;
+			position: absolute;
+			top:46px;
+			
+			
+		}
+		.h5_component_name_back{
+			top:30px;
+			-webkit-animation:back 2s infinite 2s;
+		}
+		@-webkit-keyframes back{
+			50%{top:20px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<div class="double-bonce1"></div>
+		<div class="double-bonce2"></div>
+	
+		<div id="rate">0%</div>
+		
+	</div>
+
+	<!-- 加载H5相关资源 -->
+	<script type="text/javascript">
+		var res = [
+			'Base','content'
+		]
+		var html = [];
+		for(s in res){
+			html.push('<script type="text/javascript" src="js/H5Component'+res[s]+'.js"><\/script>');
+			html.push('<link rel="stylesheet" href="css/H5Component'+res[s]+'.css">')
+		}
+		document.write(html.join(''));
+	</script>
+
+	<script type="text/javascript">
+		$(function(){
+			var h5 = new H5();
+
+		
+
+
+			//底部条条
+			h5.whenAddPage = function(){
+				this.addComponent('slide_up',{
+					bg:'img/slide-up2.png',
+					img:"img/GEA.png",
+					css:{
+						left:0,bottom:-20,opacity:0,
+						width:'100%',height:'20px',zIndex:999
+					},
+					animateIn:{opacity:1,bottom:'-1px'},
+					animateOut:{opacity:0,bottom:'-20px'},
+					delay:500
+				});
+			}
+			h5
+			.addPage("face")
+				.addComponent('logo',{
+					center:true,
+					width:395,
+					height:130,
+					img:'img/GEA.png',
+					css:{
+						opacity:0
+					},
+					animateIn:{top:50,opacity:1},
+					animateOut:{top:0,opacity:0}
+				})
+				.addComponent('title',{
+					center:true,
+					width:395,
+					height:130,
+					enname:"CLARK UNIVERSITY",
+					zhname:"克拉克大学",
+					css:{
+						opacity:0,
+						top:80
+					},
+					animateIn:{
+						top:95,
+						opacity:1
+					},
+					animateOut:{
+						top:80,
+						opacity:0
+					},
+					delay:800
+				})
+				.addComponent('img',{
+					center:true,
+					width:640,
+					height:600,
+					img1:"img/timg1.jpg",
+					img2:"img/timg2.jpg",
+					img3:"img/timg3.jpg",
+					css:{
+						opacity:0,
+						bottom:-100,
+					},
+					animateIn:{
+						bottom:40,
+						opacity:1
+					},
+					animateOut:{
+						bottom:-100,
+						opacity:0
+					},
+					delay:1000
+				})
+			.addPage('foot')
+				.addComponent('caption',{
+					text:"走进克拉克"
+				})
+				.addComponent('list',{
+					width:600,
+					height:50,
+					center:true,
+					text:'建校313年',
+					css:{opacity:0,textAlign:'center',color:'#fff',fontSize:'20px'},
+					animateIn:{top:120,opacity:1},
+					animateOut:{top:240,opacity:0}
+				})
+				.addComponent('list',{
+					width:600,
+					height:50,
+					center:true,
+					text:'美国Top 81-U.S.News',
+					css:{opacity:0,textAlign:'center',color:'#fff',fontSize:'20px',transitionDuration:'0.5s'},
+					animateIn:{top:200,opacity:1},
+					animateOut:{top:240,opacity:0},
+					delay:300
+				})
+				.addComponent('list',{
+					width:600,
+					height:50,
+					center:true,
+					text:'美国第1个诺贝尔奖诞生地',
+					css:{opacity:0,textAlign:'center',color:'#fff',fontSize:'20px',transitionDuration:'0.6s'},
+					animateIn:{top:280,opacity:1},
+					animateOut:{top:240,opacity:0},
+					delay:800
+				})
+				.addComponent('list',{
+					width:600,
+					height:50,
+					center:true,
+					text:'商学院经AACSB认证',
+					css:{opacity:0,textAlign:'center',color:'#fff',fontSize:'20px',transitionDuration:'0.7s'},
+					animateIn:{top:360,opacity:1},
+					animateOut:{top:240,opacity:0},
+					delay:1400
+				})
+				.addComponent('list',{
+					width:600,
+					height:50,
+					center:true,
+					text:'多达150个全球合作伙伴',
+					css:{opacity:0,textAlign:'center',color:'#fff',fontSize:'20px',transitionDuration:'0.8s'},
+					animateIn:{top:440,opacity:1},
+					animateOut:{top:240,opacity:0},
+					delay:1800
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:"关于克拉克"
+				})
+				.addComponent('school',{
+					width:515,
+					height:305,
+					center:true,
+					bg:'img/timg4.jpg',
+					css:{opacity:0,top:120},
+					animateIn:{top:120,opacity:1},
+					animateOut:{top:0,opacity:0}
+				})
+				.addComponent('school',{
+					width:580,
+					height:305,
+					center:true,
+					text:"克拉克大学（Clark University）位于美国马萨诸塞州，学校创建与1887年，历史悠久，是一所世界一流的以文理教育为主的私立研究型大学，也是美国最早提供研究生课程的大学之一。学校于1902年开始设立本科专业。",
+					css:{opacity:0,top:300,color:"#666",fontSize:"14px"},
+					animateIn:{left:"50%",opacity:1},
+					animateOut:{left:"0%",opacity:0},
+					delay:800
+				})
+				.addComponent('remark',{
+					width:620,
+					height:80,
+					center:true,
+					htmlstr:"<span>1877年建校</span><span>在校生3094名</span><span>国际学生14%</span>",
+					css:{opacity:0,bottom:-80,color:"red",fontSize:"12px",fontWeight:"bolder",fontFamily: "楷体"},
+					animateIn:{bottom:60,opacity:1},
+					animateOut:{bottom:0,opacity:0},
+					delay:500
+				})
+			.addPage()
+				.addComponent('QA',{
+					img:'img/timg5.jpg',
+					css:{opacity:0,top:30,},
+					animateIn:{top:30,opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+				.addComponent('description',{
+					text:'克拉克大学的Q&A',
+					css:{opacity:0,top:245,left:10,color:"#881717",fontWeight:"bloder"},
+					animateIn:{opacity:1,left:10},
+					animateOut:{opacity:0,left:-80},
+					delay:500
+				})
+				.addComponent('description',{
+					text:'ELS的Q&A环节就要开始了,对克拉克大学的了解程度有多少,就看你的表现了!',
+					css:{opacity:0,top:275,left:15,color:"#666",fontWeight:"bloder"},
+					animateIn:{opacity:1,left:15},
+					animateOut:{opacity:0,left:-80},
+					delay:800
+				})
+				.addComponent('rotate',{
+					text:'还有电影票免费送',
+					css:{opacity:0,top:350,left:15,color:"#9a8a17",fontWeight:"bloder",},
+					animateIn:{opacity:1,left:15},
+					animateOut:{opacity:0,left:-80},
+					delay:800
+				})
+				.addComponent('description',{
+					width:481,
+					height:295,
+					center:true,
+					bg:'img/char.png',
+					css:{opacity:0,color:'#000',fontSize:'15px',lineHeight:'22px',padding:'50px 30px 10px 30px',textAlign:'justify',top:360,left:"43%"},
+					text:'Q&A共有5个小题目,分别为单选与多选题,最先答对5名的参与者,将会获得ELS提供的格瓦拉橙劵2张(记得留下你的联系方式)',
+					animateIn:{bottom:360,opacity:1,left:"43%"},
+					animateOut:{bottom:-400,opacity:0,left:"43%"},
+					delay:1000
+				})
+			.addPage()
+				.addComponent('question',{
+					img:'img/timg3.jpg',
+					css:{opacity:0,top:30,},
+					animateIn:{top:30,opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+				.addComponent('qucon',{
+					center:true,
+					width:600,
+					htmlstr:listcon1,
+					css:{opacity:0,bottom:300,transitionDuration:"0.5s"},
+					animateIn:{bottom:80,opacity:0.8},
+					animateOut:{bottom:200,opacity:0},
+					delay:500
+				})
+			.addPage()
+				.addComponent('question',{
+					img:'img/timg6.jpg',
+					css:{opacity:0,top:30,},
+					animateIn:{top:30,opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+				.addComponent('qucon',{
+					center:true,
+					width:600,
+					htmlstr:listcon2,
+					css:{opacity:0,bottom:300,transitionDuration:"0.5s"},
+					animateIn:{bottom:80,opacity:0.8},
+					animateOut:{bottom:200,opacity:0},
+					delay:500
+				})
+			.addPage()
+				.addComponent('question',{
+					img:'img/timg7.jpg',
+					css:{opacity:0,top:30,},
+					animateIn:{top:30,opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+				.addComponent('qucon',{
+					center:true,
+					width:600,
+					htmlstr:listcon3,
+					css:{opacity:0,bottom:300,transitionDuration:"0.5s"},
+					animateIn:{bottom:80,opacity:0.8},
+					animateOut:{bottom:200,opacity:0},
+					delay:200
+				})
+			.addPage()
+				.addComponent('question',{
+					img:'img/timg7.jpg',
+					css:{opacity:0,top:30,},
+					animateIn:{top:30,opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+				.addComponent('qucon',{
+					center:true,
+					width:600,
+					htmlstr:listcon4,
+					css:{opacity:0,bottom:300,transitionDuration:"0.5s"},
+					animateIn:{bottom:60,opacity:0.8},
+					animateOut:{bottom:200,opacity:0},
+					delay:200
+				})
+			.addPage()
+				.addComponent('question',{
+					img:'img/timg8.jpg',
+					css:{opacity:0,top:30,},
+					animateIn:{top:30,opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+				.addComponent('qucon',{
+					center:true,
+					width:600,
+					htmlstr:listcon5,
+					css:{opacity:0,bottom:300,transitionDuration:"0.5s"},
+					animateIn:{bottom:80,opacity:0.8},
+					animateOut:{bottom:200,opacity:0},
+					delay:200
+				})
+			.addPage()
+				.addComponent('question',{
+					img:'img/timg1.jpg',
+					css:{opacity:0,top:30,},
+					animateIn:{top:30,opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+				.addComponent('baseInfo',{
+					center:true,
+					width:450,
+					htmlstr:forms,
+					css:{opacity:0,top:235,},
+					animateIn:{top:235,opacity:0.8},
+					animateOut:{top:200,opacity:0},
+					delay:200
+				})
+				.addComponent('contact',{
+					center:true,
+					width:500,
+					htmlstr:"<span>更多信息请与ELS中国支持团队联系</span>",
+					css:{opacity:0,bottom:70,},
+					animateIn:{bottom:70,opacity:0.8,fontSize:"12px",color:"#999",textAlign:"center"},
+					animateOut:{bottom:90,opacity:0},
+					delay:200
+				})
+				.addComponent('back',{
+					width:52,
+					height:50,
+					center:true,
+					bg:'img/tail_back.png',
+					onclick:function(){
+						$.fn.fullpage.moveTo(1)
+					}
+				})
+			.loader(['img/GEA.png','img/people.png','img/text-bg.png','img/ad-left.png','img/ad-right.png']);
+		})
+
+	</script>
+</body>
+</html>
