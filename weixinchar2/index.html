@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, user-scalable=no"> -->
+	<!-- <meta name="viewport" content="width=640, user-scalable=no"> -->
+	<meta name="viewport" content="width=320, user-scalable=no, initial-scale=1.0, maximum-scale=1.3, minimum-scale=1.0">
+	<title>克拉克大学你了解多少,是大学,不是超人哦!</title>
+
+	<!--载入所有资源-->
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+
+	<!-- H5对象载入 -->
+	<script type="text/javascript" src="js/H5.js"></script>
+	<link rel="stylesheet" href="css/H5.css">
+
+	<script type="text/javascript" src="js/H5_loading.js"></script>
+	<link rel="stylesheet" href="css/H5_loading.css">
+
+	<style type="text/css">
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			margin:0;
+			padding:0;
+			font-family: "Helvetica Neue", Helvetica, sans-serif;
+		}
+		.h5_page{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			background-image: url('img/bg2.png');
+		}
+		.h5_page_face{
+			background-image: url("img/bg2.png")
+		}
+		.h5_page_yaoqiu{
+			background-image: url("img/face_bg.png")
+		}
+		.h5_page_foot{
+			background-image: url("img/face_bg.png")
+		}
+		.h5_component_name_rotate{
+			-webkit-animation:rotate 2s infinite 2s;
+		}
+		@-webkit-keyframes rotate{
+			0%{transform: rotate(-15deg)}
+			5%{transform: rotate(-12deg)}
+			10%{transform: rotate(-19deg)}
+			15%{transform: rotate(-12deg)}
+			20%{transform: rotate(-17deg)}
+			25%{transform: rotate(-14deg)}
+			30%{transform: rotate(-16deg)}
+			70%{transform: rotate(-15deg)}
+		}
+		.h5_component_name_caption{
+			width: 80%;
+			height: 8.2%;
+			margin-left: 10px;
+			background-color: #e67d5d;
+			text-align: center;
+			line-height: 50px;
+			font-size: 20px;
+			color:#fff;
+			position: absolute;
+			top:5%;
+			
+			
+		}
+		.h5_component_name_back{
+			top:30px;
+			-webkit-animation:back 2s infinite 2s;
+		}
+		#address{
+			width: 90%;
+			color: #666;
+			margin:10px auto;
+		}
+		@-webkit-keyframes back{
+			50%{top:20px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<div class="double-bonce1"></div>
+		<div class="double-bonce2"></div>
+	
+		<div id="rate">0%</div>
+		
+	</div>
+
+	<!-- 加载H5相关资源 -->
+	<script type="text/javascript">
+		var res = [
+			'Base','content'
+		]
+		var html = [];
+		for(s in res){
+			html.push('<script type="text/javascript" src="js/H5Component'+res[s]+'.js"><\/script>');
+			html.push('<link rel="stylesheet" href="css/H5Component'+res[s]+'.css">')
+		}
+		document.write(html.join(''));
+	</script>
+
+	<script type="text/javascript">
+		$(function(){
+			var h5 = new H5();
+			//底部条条
+			h5.whenAddPage = function(){
+				this.addComponent('slide_up',{
+					bg:'img/slide-up2.png',
+					css:{
+						left:0,bottom:-20,opacity:0,
+						width:'100%',height:'20px',zIndex:999
+					},
+					animateIn:{opacity:1,bottom:'-1px'},
+					animateOut:{opacity:0,bottom:'-20px'},
+					delay:500
+				});
+			}
+			h5
+			.addPage("face")
+				.addComponent('logo',{
+					center:true,
+					width:55,
+					height:10,
+					img:'img/GEA.png',
+					css:{
+						opacity:0
+					},
+					animateIn:{top:"5%",opacity:1},
+					animateOut:{top:0,opacity:0}
+				})
+				.addComponent('title',{
+					center:true,
+					width:100,
+					enname:"The University of Sydney",
+					zhname:"悉尼大学",
+					css:{
+						opacity:0,
+						top:"8%"
+					},
+					animateIn:{
+						top:"16%",
+						opacity:1
+					},
+					animateOut:{
+						top:"8%",
+						opacity:0
+					},
+					delay:800
+				})
+				.addComponent('img',{
+					center:true,
+					width:90,
+					img1:"img/aboutxn.png",
+					img2:"img/12.jpg",
+					img3:"img/13.jpg",
+					css:{
+						opacity:0,
+						bottom:-100,
+					},
+					animateIn:{
+						bottom:"5%",
+						opacity:1
+					},
+					animateOut:{
+						bottom:-100,
+						opacity:0
+					},
+					delay:1000
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:"关于悉尼大学"
+				})
+				.addComponent('img',{
+					width:100,
+					height:30,
+					center:true,
+					bg:'img/aboutxn.png',
+					css:{opacity:0,top:"16%"},
+					animateIn:{top:"16%",opacity:1},
+					animateOut:{top:0,opacity:0}
+				})
+				.addComponent('school',{
+					width:90,
+					height:30,
+					center:true,
+					text:"悉尼大学是澳大利亚历史最悠久和最负盛名的大学，被称为“澳大利亚第一校”，是澳大利亚六所砂岩学府（Sandstone Universities）之一，也是澳大利亚八大名校（Group of Eight）的核心盟校成员，国际著名研究型大学联盟组织环太平洋大学联盟（APRU）、亚太国际贸易教育暨研究联盟（PACIBER）的成员大学之一，在世界范围内亦是最优秀的高等学府之一。",
+					css:{opacity:0,top:"48%",color:"#666",fontSize:"14px",textAlign:"left"},
+					animateIn:{left:"50%",opacity:1},
+					animateOut:{left:"0%",opacity:0},
+					delay:800
+				})
+				.addComponent('remark',{
+					width:100,
+					center:true,
+					htmlstr:"<span>1850建校</span><span>在校生52789名</span><span>公立型研究大学</span>",
+					css:{opacity:0,bottom:"10%",color:"red",fontSize:"14px",fontWeight:"bolder"},
+					animateIn:{bottom:"5%",opacity:1},
+					animateOut:{bottom:0,opacity:0},
+					delay:500
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:"地理位置"
+				})
+				.addComponent('img',{
+					width:100,
+					height:30,
+					center:true,
+					bg:'img/12.jpg',
+					css:{opacity:0,top:"16%"},
+					animateIn:{top:"16%",opacity:1},
+					animateOut:{top:0,opacity:0}
+				})
+				.addComponent('QA',{
+					width:90,
+					height:30,
+					center:true,
+					text:"悉尼大学主要校区紧靠新南威尔士的首府悉尼市中心西南，占地72公顷靠近中央车站及唐人街，离中心商业区仅5分钟的路程。大学还有六间分校，校园都分布在城市中心及其周围。",
+					css:{opacity:0,top:"54%",textAlign:"left",fontSize:"14px",color:"#666"},
+					animateIn:{top:"50%",opacity:1},
+					animateOut:{top:0,opacity:0}
+				})
+			.addPage('foot')
+				.addComponent('caption',{
+					text:"学院特色"
+				})
+				.addComponent('list',{
+					width:88,
+					center:true,
+					htmlstr:teselist,
+					css:{opacity:0,color:"#fff",top:"50%",transform:"translateY(-50%)"},
+					animateIn:{top:"50%",opacity:1,},
+					animateOut:{top:240,opacity:0}
+				})
+			.addPage('foot')
+				.addComponent('list',{
+					width:88,
+					center:true,
+					htmlstr:teselist2,
+					css:{opacity:0,color:"#fff",top:"50%",transform:"translateY(-50%)"},
+					animateIn:{top:"50%",opacity:1,},
+					animateOut:{top:240,opacity:0}
+				})
+			.addPage()
+				.addComponent('img',{
+					width:100,
+					height:30,
+					center:true,
+					bg:'img/13.jpg',
+					css:{opacity:0,top:"5%"},
+					animateIn:{top:"5%",opacity:1},
+					animateOut:{top:0,opacity:0}
+				})
+				.addComponent('rank',{
+					htmlstr:rank,
+					css:{opacity:0,top:"50%",transitionDuration:"0.5s"},
+					animateIn:{top:"36%",opacity:0.8},
+					animateOut:{top:"50%",opacity:0},
+					delay:500
+				})
+			.addPage('yaoqiu')
+				.addComponent('caption',{
+					text:"入学要求"
+				})
+				.addComponent('yaoqiu1',{
+					htmlstr:yaoqiu1,
+					css:{opacity:0,color:"#fff",top:"50%",left:"50%",transform:"translate(-50%,-50%)"},
+					animateIn:{top:"50%",opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+			.addPage('yaoqiu')
+				.addComponent('yaoqiu1',{
+					htmlstr:yaoqiu2,
+					css:{opacity:0,color:"#fff",top:"50%",left:"50%",transform:"translate(-50%,-50%)"},
+					animateIn:{top:"50%",opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+			.addPage('yaoqiu')
+				.addComponent('yaoqiu1',{
+					htmlstr:yaoqiu3,
+					css:{opacity:0,color:"#fff",top:"50%",left:"50%",transform:"translate(-50%,-50%)"},
+					animateIn:{top:"50%",opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+			.addPage('yaoqiu')
+				.addComponent('yaoqiu1',{
+					htmlstr:yaoqiu4,
+					css:{opacity:0,color:"#fff",top:"50%",left:"50%",transform:"translate(-50%,-50%)"},
+					animateIn:{top:"50%",opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+				.addComponent('back',{
+					width:8,
+					height:8,
+					center:true,
+					bg:'img/tail_back.png',
+					onclick:function(){
+						$.fn.fullpage.moveTo(1)
+					}
+				})
+			.loader(['img/GEA.png','img/people.png','img/text-bg.png','img/ad-left.png','img/ad-right.png']);
+		})
+
+	</script>
+</body>
+<script type="text/javascript">
+	$(function(){
+
+	})
+</script>
+</html>
