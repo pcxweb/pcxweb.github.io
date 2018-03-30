@@ -1,0 +1,64 @@
+.h5_component{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+.h5_component_name_slide_up img{
+	position: absolute;
+    width: 50px;
+    top: -23px;
+    z-index: -1;
+    left: 10px;
+}
+
+.h5_component_name_logo img{
+	height: 100%;
+}
+/*.h5_component_name_img .img1,.h5_component_name_img .img2{
+	height: 100px;
+}
+.h5_component_name_img .img3{
+	height: 120px;
+}*/
+
+.h5_component_name_img{
+	width: 100%;
+}
+.h5_component_name_list .teselist{
+	text-align: left;
+	margin:0 auto;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff;
+	border-top: 2px dashed #fff;
+	border-bottom: 2px dashed #fff;
+	padding:2% 2%;
+	box-sizing: border-box;
+}
+
+.h5_component_name_QA{
+	width: 100%;
+	left:0;
+}
+.h5_component_name_QA img{
+	width: 100%;
+}
+.h5_component_name_qucon{
+	background-color: #666;
+	color: #fff;
+	border-radius: 5px;
+}
+.h5_component_name_qucon h4{
+	padding: 8px;
+	margin: 5px 0;
+} 
+.h5_component_name_contact{
+	text-align: center;
+}
+.h5_component_name_remark span{
+	display: inline-block;
+	padding:0 8px;
+	border-right: 1px solid red;
+}
+.h5_component_name_remark span:last-child{
+	border-right: none;
+}
