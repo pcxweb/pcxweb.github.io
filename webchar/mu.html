@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, user-scalable=no"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!-- <meta name="viewport" content="width=320, user-scalable=no, initial-scale=1.0, maximum-scale=1.3, minimum-scale=1.0"> -->
+	<meta name="apple-mobile-web-app-title" content="麦考瑞大学">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+	<meta name="description" content="描述">
+	<meta itemprop="description" content="描述">
+	<title>麦考瑞大学</title>
+
+	<!--载入所有资源-->
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+
+	<!-- H5对象载入 -->
+	<script type="text/javascript" src="js/H5.js"></script>
+	<link rel="stylesheet" href="css/H5.css">
+
+	<script type="text/javascript" src="js/H5_loading.js"></script>
+	<link rel="stylesheet" href="css/H5_loading.css">
+	<!-- <script type="text/javascript">
+	var wd = document.documentElement.clientWidth*window.devicePixelRatio/10;
+	document.getElementsByTagName("html")[0].style.fontSize = wd + "px";
+	var scale = 1/window.devicePixelRatio;
+	var mstr = 'initial-scale='+ scale +', maximum-scale='+ scale +', minimum-scale='+ scale +', user-scalable=no';
+	document.getElementById("vp").content = mstr;
+	</script> -->
+	<style type="text/css">
+		.h5_page{
+			text-align: center;
+			background-image: url('img/bg2.png');
+		}
+		.h5_page_face{
+			background-image: url("img/face_bg.png")
+		}
+		.h5_page_yaoqiu{
+			background-image: url("img/face_bg.png");
+
+		}
+		.h5_page_foot{
+			background-image: url("img/face_bg.png")
+		}
+		.h5_component_name_rotate{
+			-webkit-animation:rotate 2s infinite 2s;
+		}
+		@-webkit-keyframes rotate{
+			0%{transform: rotate(-15deg)}
+			5%{transform: rotate(-12deg)}
+			10%{transform: rotate(-19deg)}
+			15%{transform: rotate(-12deg)}
+			20%{transform: rotate(-17deg)}
+			25%{transform: rotate(-14deg)}
+			30%{transform: rotate(-16deg)}
+			70%{transform: rotate(-15deg)}
+		}
+		.h5_component_name_caption{
+			width:100%;
+			background-color: #e67d5d;
+			text-align: left;
+			font-size: 0.2rem;
+			color:#fff;
+			padding:0.08rem;
+			position: absolute;
+			top:5%;
+			text-indent: 0.1rem;
+			
+			
+		}
+		.h5_component_name_back{
+			top:30px;
+			-webkit-animation:back 2s infinite 2s;
+		}
+		.h5_component_name_slide_up{
+			bottom:0;
+			-webkit-animation:up 2s infinite 2s;
+		}
+		#address{
+			width: 90%;
+			color: #666;
+			margin:10px auto;
+		}
+		@-webkit-keyframes back{
+			50%{top:20px;}
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<div class="double-bonce1"></div>
+		<div class="double-bonce2"></div>
+	
+		<div id="rate">0%</div>
+		
+	</div>
+
+	<!-- 加载H5相关资源 -->
+	<script type="text/javascript">
+		var res = [
+			'Base'
+		]
+		var html = [];
+		for(s in res){
+			html.push('<script type="text/javascript" src="js/H5Component'+res[s]+'.js"><\/script>');
+			html.push('<link rel="stylesheet" href="css/H5Component'+res[s]+'.css">')
+		}
+		document.write(html.join(''));
+	</script>
+	<!-- <script>(function(){var e,t,d,n;t=document.documentElement,e=document.getElementsByTagName("head")[0],d=window.devicePixelRatio,d=d>=3?3:d>=2?2:1,t.setAttribute("data-dpr",d),n=1/d,window.dpr=d,window.rdpr=n}).call(this);</script> -->
+	<link rel="stylesheet" href="css/H5Componentcontent.css">
+	<script type="text/javascript" src="js/H5Componentmu.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var h5 = new H5();
+			//底部条条
+			h5.whenAddPage = function(){
+				this.addComponent('slide_up',{
+					bg:'img/top.png',
+					center:true,
+					css:{
+						width:'10%',height:'10%',zIndex:999
+					},
+					delay:500
+				});
+			}
+			h5
+			.addPage("face")
+				.addComponent('title',{
+					center:true,
+					width:"100%",
+					enname:"Macquarie University",
+					zhname:"麦考瑞大学",
+					css:{
+						opacity:0,
+						top:"5%",
+						color:"#fff"
+					},
+					animateIn:{
+						top:"5%",
+						opacity:1
+					},
+					animateOut:{
+						top:"5%",
+						opacity:0
+					},
+					delay:800
+				})
+				.addComponent('img',{
+					center:true,
+					width:"90%",
+					img1:"img/mu1.jpg",
+					img2:"img/mu2.jpg",
+					img3:"img/mu3.jpg",
+					css:{
+						opacity:0
+					},
+					animateIn:{
+						opacity:1
+					},
+					animateOut:{
+						opacity:0
+					},
+					delay:1000
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:"关于麦考瑞大学"
+				})
+				.addComponent('caption_img',{
+					width:"80%",
+					center:true,
+					bg:'img/mu1.jpg',
+					css:{opacity:0,backgroundSize: "cover"},
+					animateIn:{opacity:1},
+					animateOut:{opacity:0}
+				})
+				.addComponent('school',{
+					width:"90%",
+					center:true,
+					text:"麦考瑞大学（Macquarie University)建于1964年，以拥有“The Father of Australia”之称的Lachlan Macquarie总督命名。其高质量的教学和科研水准受到了QS五星认证，且是所有评比科目都获得五星的五所大学之一。",
+					css:{opacity:0,color:"#666",fontSize:"0.14rem",textAlign:"left",lineHeight:"0.2rem"},
+					animateIn:{left:"50%",opacity:1},
+					animateOut:{left:"0%",opacity:0},
+					delay:800
+				})
+				.addComponent('remark',{
+					width:"100%",
+					center:true,
+					htmlstr:'<div>1964年建校 | 在校生39335名 | 公立大学</div>',
+					css:{opacity:0,color:"rgb(211, 5, 32)",fontSize:"0.14rem",fontWeight:"700"},
+					animateIn:{opacity:1},
+					animateOut:{bottom:0,opacity:0},
+					delay:500
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:"地理位置"
+				})
+				.addComponent('caption_img',{
+					width:"80%",
+					center:true,
+					bg:'img/mu2.jpg',
+					css:{opacity:0,backgroundSize: "cover"},
+					animateIn:{opacity:1},
+					animateOut:{opacity:0}
+				})
+				.addComponent('school',{
+					width:"90%",
+					center:true,
+					text:"学校位于澳洲最大的高科技园内，离悉尼市中心30分钟车程。园林般的校园占地126公顷，紧挨着Lane Cove国家公园。超过300家公司坐落在校园内或在麦考瑞公园高新区，如微软、思科、康柏、霍尼韦尔、甲骨文、索尼等。",
+					css:{opacity:0,textAlign:"left",fontSize:"0.14rem",color:"#666",lineHeight:"0.2rem"},
+					animateIn:{opacity:1},
+					animateOut:{opacity:0}
+				})
+			.addPage('foot')
+				.addComponent('caption',{
+					text:"学院特色",
+					css:{backgroundColor:"transparent"}
+				})
+				.addComponent('list',{
+					width:"88%",
+					center:true,
+					htmlstr:teselist,
+					css:{opacity:0,color:"#fff",transform:"translateY(-50%)"},
+					animateIn:{opacity:1,},
+					animateOut:{opacity:0}
+				})
+			.addPage('foot')
+				.addComponent('caption',{
+					text:"学院特色",
+					css:{backgroundColor:"transparent"}
+				})
+				.addComponent('list',{
+					width:"88%",
+					center:true,
+					htmlstr:teselist2,
+					css:{opacity:0,color:"#fff",transform:"translateY(-50%)",fontFamily:"pingfang"},
+					animateIn:{opacity:1,},
+					animateOut:{opacity:0}
+				})
+			.addPage()
+				.addComponent('rank_img',{
+					width:"100%",
+					height:"30%",
+					center:true,
+					bg:'img/mu3.jpg',
+					css:{opacity:0,top:"5%"},
+					animateIn:{top:"5%",opacity:1},
+					animateOut:{top:0,opacity:0}
+				})
+				.addComponent('rank',{
+					htmlstr:rank,
+					css:{opacity:0,transitionDuration:"0.5s"},
+					animateIn:{opacity:0.8},
+					animateOut:{opacity:0},
+					delay:500
+				})
+			.addPage('yaoqiu')
+				.addComponent('caption',{
+					text:"入学要求",
+					css:{backgroundColor:"transparent"}
+				})
+				.addComponent('yaoqiu1',{
+					htmlstr:yaoqiu1,
+					css:{opacity:0,color:"#fff",top:"50%",left:"50%",transform:"translate(-50%,-50%)"},
+					animateIn:{top:"50%",opacity:1},
+					animateOut:{top:0,opacity:0}
+				})
+			.addPage('yaoqiu')
+				.addComponent('caption',{
+					text:"入学要求",
+					css:{backgroundColor:"transparent"}
+				})
+				.addComponent('yaoqiu1',{
+					htmlstr:yaoqiu2,
+					css:{opacity:0,color:"#fff",top:"50%",left:"50%",transform:"translate(-50%,-50%)"},
+					animateIn:{top:"50%",opacity:1,},
+					animateOut:{top:0,opacity:0,}
+				})
+				.addComponent('back',{
+					width:"8%",
+					height:"8%",
+					center:true,
+					bg:'img/tail_back.png',
+					onclick:function(){
+						$.fn.fullpage.moveTo(1)
+					}
+				})
+			.loader(['img/GEA.png','img/12.jpg','img/13.jpg']);
+		})
+
+	</script>
+	<script type="text/javascript" src="js/Height.js"></script>
+</body>
+
+</html>
