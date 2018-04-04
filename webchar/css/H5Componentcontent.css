@@ -1,0 +1,98 @@
+.h5_component_name_baseInfo input{
+	width: 90%;
+	border:1px solid #666;
+	color: #666;
+	padding:3% 5%;
+	border-radius: 5px;
+	margin-bottom: 8px;
+}
+.h5_component_name_baseInfo ul{
+	padding-left: 0px;
+}
+.h5_component_name_baseInfo button{
+	width: 100%;
+	padding:3% 5%;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #ff9c00;
+	border:1px solid #ff9c00;
+}
+.h5_component_name_rank{
+	width: 100%;
+}
+.h5_component_name_rank .rank>div{
+	text-align: center;
+}
+.h5_component_name_rank .rank>div>p{
+	display: inline-block;
+	background-color: #ff9c00;
+	border-radius: 5px;
+	padding:2%;
+	color: #fff;
+	font-size: 0.12rem;
+	text-align: center;
+	text-indent: 0;
+	margin:2% 0;
+}
+.h5_component_name_rank .rank>ul{
+	text-align: left;
+	padding-left: 5%;
+	font-size: 0.12rem;
+}
+/*基本都是短的专业时*/
+/*.h5_component_name_rank .rank>ul>li{
+	float: left;
+	list-style: none;
+	width: 40%;
+}
+.h5_component_name_rank .rank>ul>li:nth-child(even){
+	width:58%;
+	margin-left: 2%
+}
+.h5_component_name_rank .rank>ul>li span{
+	display: inline-block;
+	width: 78%;
+}*/
+
+/*排名问题:过长的专业时*/
+.h5_component_name_rank .rank>ul>li{
+	float: left;
+	list-style: none;
+	border-right: 1px solid #ff9800;
+	margin-bottom: 0.5em;
+}
+.h5_component_name_rank .rank>ul>li:last-child(){
+	border-right: 1px solid none;
+
+}
+.h5_component_name_rank .rank>ul>li span{
+	display: inline-block;
+	margin:0 0.5em;
+}
+.h5_component_name_rank .rank>ul>li strong{
+	display: inline-block;
+	margin-right: 0.5em;
+	color: red;
+}
+
+
+.h5_component_name_yaoqiu1{
+	width: 90%;
+	margin:0 auto;
+	text-align: left;
+}
+.h5_component_name_yaoqiu1 .special>ul{
+	padding-left: 0.16rem;
+	font-size: 0.16rem;
+}
+.h5_component_name_yaoqiu1 .special>ul>li{
+	list-style: disc;
+	margin-bottom: 0.5em;
+	/*color: #5136ea*/
+}
+.h5_component_name_yaoqiu1 .special>ul>li>ul li{
+	list-style: circle;
+	margin-bottom: 0.5em;
+	color: #fff;
+}
+
